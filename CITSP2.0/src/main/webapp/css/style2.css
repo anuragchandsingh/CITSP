@@ -1,0 +1,37 @@
+.table1 {
+ width: 100%;
+  border: 2px solid black;
+  
+ }
+.table1, .table1 th, .table1 td {
+   border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+.table1 tr:nth-child(even) {
+  background-color: #F8F9F9;
+}
+.table1 tr:nth-child(odd) {
+  background-color: #EAEDED;
+}
+.table1 th{
+ background-color: #6dabe4;
+}
+.table1 td{
+  text-align:center;
+}
+
+.tableimage{
+	 		border:1px solid black;
+            display:inline-block;
+            width: 100px;
+            height:100px;
+            overflow:hidden; 
+}
+
+.table2{
+	  width: 100%;  
+            margin-left: auto;
+            margin-right: auto;
+}
+
