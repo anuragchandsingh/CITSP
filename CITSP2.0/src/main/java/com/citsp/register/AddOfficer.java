@@ -38,8 +38,7 @@ public class AddOfficer extends HttpServlet {
 		String formatDateTime = now.format(format);
 		String imagefilename = formatDateTime + filename;
 
-		String uploadPath = "D:/Project/Crime Investigation tracker with suspect prediction/CITSP2.0/src/main/webapp/images/"
-				+ imagefilename;
+		String uploadPath = "C:/Users/anura/git/CITSP/CITSP2.0/src/main/webapp/images/"+ imagefilename;
 
 		String name = request.getParameter("name");
 		String mobile = request.getParameter("mobile");

@@ -40,7 +40,7 @@ public class AddSuspect extends HttpServlet {
 		DateTimeFormatter format1 = DateTimeFormatter.ofPattern("dd-MM-yy");
 		String date = now.format(format1);
 
-		String uploadPath = "D:/Project/Crime Investigation tracker with suspect prediction/CITSP2.0/src/main/webapp/images/"
+		String uploadPath = "C:/Users/anura/git/CITSP/CITSP2.0/src/main/webapp/images/"
 				+ imagefilename;
 
 		HttpSession session = request.getSession();

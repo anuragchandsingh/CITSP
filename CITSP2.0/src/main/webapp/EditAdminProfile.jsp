@@ -36,7 +36,7 @@
 	String email=null;
 	String mobile=null;
 	String address=null;
-	String image=null;
+	//String image=null;
 	if(rs.next())
 	{
 		id=rs.getString("id");
@@ -44,7 +44,7 @@
 		email=rs.getString("email");
 		mobile=rs.getString("mobile");
 		address=rs.getString("address");
-		image=rs.getString("image");
+		//image=rs.getString("image");
 	}
 %>
 	
@@ -53,7 +53,7 @@
 		<form method="post" action="AdminUpdate">
 			<div class="d-flex justify-content-center">
 			<p class="h3">Edit Profile</p>
-			<input type=hidden name="id" id="id" value="<%=id%>">
+			
 			</div>
               <div class="card mb-4">
                 <div class="card-body">

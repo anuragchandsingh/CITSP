@@ -21,7 +21,7 @@
 }
     </style>
 </head>
-
+<body>
 <div class="hd">
 		<h2 calss="form-title" style="color: #4292dc;">
 			<center>CRIME INVESTIGATION SYSTEM</center>

@@ -46,7 +46,7 @@ public class AdminUpdate extends HttpServlet {
 		}
 		else
 		{
-			rd=request.getRequestDispatcher("EditProfile.jsp");
+			rd=request.getRequestDispatcher("EditAdminProfile.jsp");
 			request.setAttribute("status","failed");
 		}
 		rd.forward(request, response);
