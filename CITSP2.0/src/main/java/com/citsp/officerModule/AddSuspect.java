@@ -40,11 +40,11 @@ public class AddSuspect extends HttpServlet {
 		DateTimeFormatter format1 = DateTimeFormatter.ofPattern("dd-MM-yy");
 		String date = now.format(format1);
 
-		String uploadPath = "C:/Users/anura/git/CITSP/CITSP2.0/src/main/webapp/images/"
-				+ imagefilename;
+		String uploadPath = "C:/Users/anura/git/CITSP/CITSP2.0/src/main/webapp/images/"+ imagefilename;
 
 		HttpSession session = request.getSession();
-		int caseid = (int) session.getAttribute("caseid");
+		String caseid1 = (String) session.getAttribute("caseid");
+		int caseid= Integer.parseInt(caseid1);
 		String name = request.getParameter("name");
 		String mobile = request.getParameter("mobile");
 		String relation = request.getParameter("relation");

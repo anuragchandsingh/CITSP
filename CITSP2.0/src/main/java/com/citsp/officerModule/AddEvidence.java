@@ -43,8 +43,10 @@ public class AddEvidence extends HttpServlet {
 				+ imagefilename;
 
 		HttpSession session = request.getSession();
-		int caseid = (int) session.getAttribute("caseid");
-		int officerid = (int) session.getAttribute("officerid");
+		String caseid1 = (String) session.getAttribute("caseid");
+		int caseid = Integer.parseInt(caseid1);
+		String officerid1 = (String) session.getAttribute("officerid");
+		int officerid= Integer.parseInt(officerid1);
 		String type = request.getParameter("evidencetype");
 		String evidence = request.getParameter("evidence");
 		String suspect = request.getParameter("suspect");

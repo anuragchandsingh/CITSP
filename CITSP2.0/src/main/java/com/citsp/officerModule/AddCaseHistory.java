@@ -26,8 +26,10 @@ public class AddCaseHistory extends HttpServlet {
 		String date = now.format(format1);
 
 		HttpSession session = request.getSession();
-		int caseid = (int) session.getAttribute("caseid");
-		int officerid = (int) session.getAttribute("officerid");
+		String caseid1 = (String) session.getAttribute("caseid");
+		int caseid = Integer.parseInt(caseid1);
+		String officerid1 = (String) session.getAttribute("officerid");
+		int officerid= Integer.parseInt(officerid1);
 		String history = request.getParameter("history");
 
 		RequestDispatcher dispatcher = null;

@@ -23,7 +23,8 @@
 <body>
    <%
     Connection con = DBConnection.createConnection();
-   	int caseid = (int)session.getAttribute("caseid");
+   	String caseid1 = (String)session.getAttribute("caseid");
+   	int caseid= Integer.parseInt(caseid1);
     PreparedStatement pstmt = con.prepareStatement("select name from suspect where caseid=?");
     pstmt.setInt(1,caseid);
     ResultSet rs = pstmt.executeQuery();

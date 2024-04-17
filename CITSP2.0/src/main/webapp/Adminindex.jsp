@@ -122,40 +122,6 @@ if (session.getAttribute("adminid") == null) {
 
 				</div>
 			</div>
-
-			<%
-			Statement stmt1 = con.createStatement();
-			Statement stmt2 = con.createStatement();
-
-			String query1 = "select count * from ncase";
-			String query2 = "select count * from officer";
-			%>
-			<!--  
-			<div class="row">
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header h4 text-center">Case Details</div>
-						<div class="card-body">
-							<h5 class="card-title">Special title treatment</h5>
-							<p class="card-text">With supporting text below as a natural
-								lead-in to additional content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card">
-						<div class="card-header h4 text-center">Officer Details</div>
-						<div class="card-body">
-							<h5 class="card-title">Special title treatment</h5>
-							<p class="card-text">With supporting text below as a natural
-								lead-in to additional content.</p>
-							<a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			-->
 		</div>
 	</section>
 	<script src="vendor/jquery/jquery.min.js"></script>

@@ -33,7 +33,7 @@ public class AdminLogin extends HttpServlet {
 			pstmt.setString(2, password);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				session.setAttribute("adminid", rs.getString("id"));
+				session.setAttribute("adminid", id);
 				dispatcher = request.getRequestDispatcher("Adminindex.jsp");
 			} else {
 				request.setAttribute("status", "failed");

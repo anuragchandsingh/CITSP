@@ -32,7 +32,8 @@
 	<h2 class="form-title">	<center><u>Suspects</u></center></h2>
 	<%
 	Connection con = DBConnection.createConnection();
-	int caseid = (int) session.getAttribute("caseid");
+	String caseid1 = (String) session.getAttribute("caseid");
+	int caseid = Integer.parseInt(caseid1);
 
 	RequestDispatcher dispatcher = null;
 	PreparedStatement pstmt = con.prepareStatement("select count(*) from suspect where caseid=?");

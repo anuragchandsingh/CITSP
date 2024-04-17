@@ -23,8 +23,12 @@ public class OfficerLogin extends HttpServlet {
        
    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int caseid = Integer.parseInt(request.getParameter("caseid"));
-		int officerid =Integer.parseInt(request.getParameter("officerid"));
+		
+		String caseid= request.getParameter("caseid");
+		String officerid= request.getParameter("officerid");
+		
+		int caseid1= Integer.parseInt(caseid);
+		int officerid1= Integer.parseInt(officerid);
 		String pass = request.getParameter("pass");
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = null;
@@ -32,19 +36,18 @@ public class OfficerLogin extends HttpServlet {
 		try {
 		     con=DBConnection.createConnection();
 			PreparedStatement pstmt = con.prepareStatement("select * from login where caseid=? and officerid=? and pass=?");
-			pstmt.setInt(1,caseid);
-			pstmt.setInt(2, officerid);
+			pstmt.setInt(1,caseid1);
+			pstmt.setInt(2, officerid1);
 			pstmt.setString(3, pass);
 			ResultSet rs= pstmt.executeQuery();
-			PreparedStatement pstmt2 = con.prepareStatement("select * from officer where id=?");
-			pstmt2.setInt(1,officerid);
-			rs= pstmt2.executeQuery();
+			PreparedStatement pstmt2 = con.prepareStatement("select casename from ncase where caseid=?");
+			pstmt2.setInt(1, caseid1);
+			 rs = pstmt2.executeQuery();
 			if(rs.next())
 			{
-				session.setAttribute("caseid",caseid);
+				session.setAttribute("caseid", caseid);
 				session.setAttribute("officerid", officerid);
-				session.setAttribute("name", rs.getString("name"));
-				session.setAttribute("image", rs.getString("image"));
+				session.setAttribute("casename", rs.getString("casename"));
 				dispatcher= request.getRequestDispatcher("Officerindex.jsp");
 			}
 			else
